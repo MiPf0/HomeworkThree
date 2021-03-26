@@ -1,0 +1,4 @@
+id,windSpeed,date,station,temperature,windDirection,weatherCondition
+1,26,26.01.2020 18:35:20,Vienna,5,NE,cloudy
+2,122,30.06.1995 06:20:11,Orlando,30,E,sunny
+3,1,21.12.2011 14:13:00,Innsbruck,-1,S,snowy
