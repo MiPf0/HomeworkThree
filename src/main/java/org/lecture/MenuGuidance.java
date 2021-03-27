@@ -93,8 +93,9 @@ public class MenuGuidance {
      */
     public static void getAllWindSpeedEntriesAndAddThemToCSV(int currentListSize, String path) {
 
-        List<WindSpeedEntry> entriesList;
         int numberOfEntries = getNumberOfEntries();
+
+        int numberOfListEntries = 0;
 
         for (int i = 1; i <= numberOfEntries; i++) {
 
@@ -111,8 +112,6 @@ public class MenuGuidance {
                     .build();
 
             do {
-
-                entry.setId(currentListSize+1);
 
                 int option = getOptionMakeNewWindSpeedEntry();
                 int option1 = 0;
@@ -153,7 +152,9 @@ public class MenuGuidance {
                                 System.out.println("Station is still missing.");
 
                         } else {
+                            entry.setId(currentListSize+numberOfListEntries+1);
                             CSVConfiguration.addWindSpeedEntryToCSV(entry,path);
+                            numberOfListEntries++;
                             option1 = 77;
                         }
                     }

@@ -35,7 +35,16 @@ public class WindSpeedEntry {
     public WindSpeedEntry() {
     }
 
-
+    /**
+     * private constructor for WindSpeedEntry objects
+     * @param id
+     * @param windSpeed
+     * @param date
+     * @param station
+     * @param temperature
+     * @param windDirection
+     * @param weatherCondition
+     */
     private WindSpeedEntry(int id, Double windSpeed, String date, String station, Double temperature, String windDirection, String weatherCondition) {
         this.id = id;
         this.windSpeed = windSpeed;
@@ -46,6 +55,9 @@ public class WindSpeedEntry {
         this.weatherCondition = weatherCondition;
     }
 
+    /**
+     * Builder class for WindSpeedEntry class
+     */
     public static class WindSpeedEntryBuilder {
 
         private int id;
@@ -56,41 +68,79 @@ public class WindSpeedEntry {
         private String windDirection;
         private String weatherCondition;
 
+        /**
+         * Id builder
+         * @param id
+         * @return WindSpeedEntryBuilder id
+         */
         public WindSpeedEntryBuilder withId(int id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * windSpeed builder
+         * @param windSpeed
+         * @return WindSpeedEntryBuilder windSpeed
+         */
         public WindSpeedEntryBuilder withWindSpeed(Double windSpeed) {
             this.windSpeed = windSpeed;
             return this;
         }
 
+        /**
+         * date builder
+         * @param date
+         * @return WindSpeedEntryBuilder date
+         */
         public WindSpeedEntryBuilder withDate(String date) {
             this.date = date;
             return this;
         }
 
+        /**
+         * station builder
+         * @param station
+         * @return WindSpeedEntryBuilder station
+         */
         public WindSpeedEntryBuilder withStation(String station) {
             this.station = station;
             return this;
         }
 
+        /**
+         * temperature builder
+         * @param temperature
+         * @return WindSpeedEntryBuilder temperature
+         */
         public WindSpeedEntryBuilder withTemperature(Double temperature) {
             this.temperature = temperature;
             return this;
         }
 
+        /**
+         * windDirection builder
+         * @param windDirection
+         * @return WindSpeedEntryBuilder direction
+         */
         public WindSpeedEntryBuilder withWindDirection(String windDirection) {
             this.windDirection = windDirection;
             return this;
         }
 
+        /**
+         * weatherCondition builder
+         * @param weatherCondition
+         * @return WindSpeedEntryBuilder weatherCondition
+         */
         public WindSpeedEntryBuilder withWeatherCondition(String weatherCondition) {
             this.weatherCondition = weatherCondition;
             return this;
         }
 
+        /**
+         * build method
+         */
         public org.lecture.WindSpeedEntry build() {
 
             return new org.lecture.WindSpeedEntry

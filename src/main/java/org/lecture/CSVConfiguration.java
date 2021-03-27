@@ -8,13 +8,13 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * class with methods that...
- *  - read csv file and save data into windSpeedEntry Object
- *  - add given windSpeedEntry Object to csv file
+ *  - reads csv file and save data into windSpeedEntry Object
+ *  - adds given windSpeedEntry Object to csv file
  */
 public class CSVConfiguration {
 
@@ -27,7 +27,7 @@ public class CSVConfiguration {
      */
     public static List<WindSpeedEntry> getWindSpeedEntriesFromCSV(String path) {
 
-        List<WindSpeedEntry> windSpeedEntries = new LinkedList<>();
+        List<WindSpeedEntry> windSpeedEntries = new ArrayList<>();
 
         try {
             Reader reader = Files.newBufferedReader(Paths.get(path));
